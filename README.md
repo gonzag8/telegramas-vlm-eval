@@ -1,126 +1,69 @@
 # VLM Benchmark — Telegramas Electorales
 
-Ambiente de pruebas para evaluar VLMs (Chandra-OCR, Qwen-VL, Llama Vision) aplicados a la lectura de telegramas electorales de la Provincia de Santa Fe.
+Ambiente de pruebas para evaluar Vision Language Models (Chandra-OCR, Qwen-VL, Llama Vision) aplicados a la lectura de telegramas electorales de la Provincia de Santa Fe.
+
+**Estado actual**: en configuración inicial. Todavía no hay resultados — este README documenta el diseño del ambiente de pruebas antes de correr el primer benchmark.
 
 ## Objetivo
 
-Comparar qué tan bien distintos Vision Language Models extraen datos estructurados (votos por partido, número de mesa, etc.) de imágenes de planillas, usando el mismo set de imágenes y el mismo prompt para cada uno.
+Comparar qué tan bien distintos VLMs extraen datos estructurados (votos por partido, número de mesa, etc.) a partir de imágenes de planillas, usando el mismo set de imágenes y el mismo prompt para cada modelo, de forma que la comparación sea justa entre ellos.
 
----
+## Modelos a evaluar
 
-## Paso a paso para dejar el repo listo
+| Modelo | Vía de acceso | Por qué se incluye |
+|---|---|---|
+| Chandra-OCR 2 | Hosted API / playground | Especializado en documentos estructurados y tablas |
+| Qwen-VL | OpenRouter | Modelo generalista con buen grounding multimodal |
+| Llama Vision | Groq API | Punto de comparación como modelo generalista alternativo |
 
-### 1. Crear el repositorio
-
-- Nombre sugerido: `vlm-benchmark-telegramas` (o el que prefiera el profe)
-- Privado, dado que eventualmente va a tener imágenes de datos electorales
-- Invitar como colaboradores al profe y a quien más aporte del equipo
-
-### 2. Estructura de carpetas
+## Estructura del repositorio
 
 ```
-vlm-benchmark-telegramas/
+vlm-ocr-telegramas/
 ├── README.md
 ├── requirements.txt
 ├── .env.example
-├── .gitignore
 ├── images/
-│   └── test/              # imágenes de prueba, NO sensibles al inicio
+│   └── test/              # imágenes de prueba (no sensibles)
 ├── ground_truth/
-│   └── labels.json        # valores correctos por imagen
+│   └── labels.json        # valores correctos por imagen, para medir accuracy
 ├── notebooks/
 │   ├── 01_chandra_ocr.ipynb
 │   ├── 02_qwen_vl.ipynb
 │   └── 03_llama_vision.ipynb
 ├── src/
-│   ├── prompts.py          # prompt único compartido entre modelos
-│   └── evaluate.py         # script de comparación contra ground truth
+│   ├── prompts.py          # prompt único, compartido entre los tres modelos
+│   └── evaluate.py         # compara salidas contra ground truth y calcula accuracy
 └── results/
     ├── raw/                # salida cruda de cada modelo, por imagen
-    └── metrics.csv         # accuracy, tiempo, etc. consolidado
+    └── metrics.csv         # accuracy y tiempo de respuesta, consolidado
 ```
 
-### 3. Configurar el entorno
+## Metodología
 
-`requirements.txt` mínimo para arrancar (vas a sumar más según lo que necesite cada notebook):
+1. Se arma un set fijo de imágenes de prueba con su ground truth (valores correctos conocidos).
+2. Se define un único prompt, adaptado a la sintaxis de cada API, pidiendo siempre el mismo formato de salida en JSON.
+3. Cada modelo procesa el mismo set de imágenes con el mismo prompt.
+4. Se compara cada salida contra el ground truth, campo por campo, y se calcula accuracy y tiempo de respuesta por modelo.
+5. Los resultados se documentan en este README a medida que están disponibles.
 
-```
-python-dotenv
-requests
-groq
-openai          # OpenRouter usa el mismo cliente que OpenAI
-pillow
-pandas
-jupyter
-```
+## Cómo correrlo
 
-`.env.example` (nunca subir el `.env` real, solo este template):
-
-```
-GROQ_API_KEY=
-OPENROUTER_API_KEY=
-DATALAB_API_KEY=
+```bash
+git clone <url-del-repo>
+cd telegramas-vlm-eval
+pip install -r requirements.txt
+cp .env.example .env   # completar con las API keys correspondientes
 ```
 
-`.gitignore` — como mínimo:
+Las API keys necesarias (Groq, OpenRouter, y la de Datalab si se usa la hosted API en vez del playground) se completan en `.env`, que no se sube al repositorio.
 
-```
-.env
-__pycache__/
-*.ipynb_checkpoints
-images/real/           # cuando haya imágenes reales, nunca al repo
-```
+Cada notebook en `notebooks/` es independiente y corre el benchmark para un modelo. `src/evaluate.py` consolida los resultados de `results/raw/` en `results/metrics.csv`.
 
-### 4. Conseguir las API keys
+## Resultados
 
-- **Groq** (Llama Vision): cuenta gratis en console.groq.com, tiene free tier generoso
-- **OpenRouter** (Qwen-VL): cuenta gratis en openrouter.ai, créditos gratis para empezar
-- **Datalab** (Chandra-OCR): revisar si el playground gratuito alcanza para el volumen de pruebas, o si hace falta la hosted API con key
+*(Pendiente — se completa esta sección una vez corrido el primer benchmark)*
 
-### 5. Preparar el ground truth
+## Nota sobre datos sensibles
 
-- Elegir 5-10 imágenes de telegramas de prueba (no sensibles, o mock generadas)
-- Armar `ground_truth/labels.json` a mano con el valor correcto de cada campo por imagen, ejemplo:
-
-```json
-{
-  "telegrama_01.png": {
-    "mesa": "0123",
-    "partido_A": 145,
-    "partido_B": 98,
-    "partido_C": 12
-  }
-}
-```
-
-Sin esto no se puede medir accuracy real, solo comparar visualmente.
-
-### 6. Definir el prompt único (`src/prompts.py`)
-
-Mismo prompt para los tres modelos (adaptado a la sintaxis de cada API), pidiendo siempre el mismo formato de salida en JSON, para que la comparación sea justa.
-
-### 7. Notebook por modelo
-
-Cada notebook (`01_chandra_ocr.ipynb`, `02_qwen_vl.ipynb`, `03_llama_vision.ipynb`) debería:
-
-1. Cargar las imágenes de `images/test/`
-2. Llamar al modelo correspondiente con el prompt de `src/prompts.py`
-3. Guardar la salida cruda en `results/raw/<modelo>/<imagen>.json`
-
-### 8. Script de evaluación (`src/evaluate.py`)
-
-Compara cada salida en `results/raw/` contra `ground_truth/labels.json`, calcula accuracy por campo y por modelo, y vuelca todo en `results/metrics.csv`.
-
-### 9. README con hallazgos (actualizar esta sección a medida que hay resultados)
-
-Tabla final con accuracy, tiempo de respuesta promedio, y ejemplos concretos de dónde falla cada modelo — esto es lo que más le interesa ver al profe, más que el código en sí.
-
----
-
-## Próximos pasos (una vez armado)
-
-- [ ] Correr Chandra-OCR sobre el set de prueba
-- [ ] Correr Qwen-VL sobre el mismo set
-- [ ] Correr Llama Vision sobre el mismo set
-- [ ] Consolidar métricas y comparar
-- [ ] Confirmar con el profe la política de datos antes de correr sobre telegramas reales (privacidad de datos electorales — evaluar si conviene inferencia local/on-premise en vez de APIs de terceros)
+Las imágenes usadas en esta primera etapa son de prueba, no telegramas reales. Antes de correr el benchmark sobre datos electorales reales, se define con la cátedra si corresponde usar APIs de terceros o si es necesario correr los modelos localmente por razones de privacidad de datos.
