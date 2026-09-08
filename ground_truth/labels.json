@@ -1,0 +1,252 @@
+{
+  "sample_1312.png": {
+    "original_idx": 1312,
+    "label": 4,
+    "num_digits": 1
+  },
+  "sample_0432.png": {
+    "original_idx": 432,
+    "label": 80,
+    "num_digits": 2
+  },
+  "sample_7381.png": {
+    "original_idx": 7381,
+    "label": 15,
+    "num_digits": 2
+  },
+  "sample_6590.png": {
+    "original_idx": 6590,
+    "label": 130,
+    "num_digits": 3
+  },
+  "sample_4368.png": {
+    "original_idx": 4368,
+    "label": 9,
+    "num_digits": 1
+  },
+  "sample_6739.png": {
+    "original_idx": 6739,
+    "label": 242,
+    "num_digits": 3
+  },
+  "sample_4288.png": {
+    "original_idx": 4288,
+    "label": 48,
+    "num_digits": 2
+  },
+  "sample_5238.png": {
+    "original_idx": 5238,
+    "label": 11,
+    "num_digits": 2
+  },
+  "sample_4570.png": {
+    "original_idx": 4570,
+    "label": 20,
+    "num_digits": 2
+  },
+  "sample_5577.png": {
+    "original_idx": 5577,
+    "label": 2,
+    "num_digits": 1
+  },
+  "sample_7106.png": {
+    "original_idx": 7106,
+    "label": 5,
+    "num_digits": 1
+  },
+  "sample_1096.png": {
+    "original_idx": 1096,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_4090.png": {
+    "original_idx": 4090,
+    "label": 31,
+    "num_digits": 2
+  },
+  "sample_1831.png": {
+    "original_idx": 1831,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_8646.png": {
+    "original_idx": 8646,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_2421.png": {
+    "original_idx": 2421,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_6636.png": {
+    "original_idx": 6636,
+    "label": 117,
+    "num_digits": 3
+  },
+  "sample_9052.png": {
+    "original_idx": 9052,
+    "label": 115,
+    "num_digits": 3
+  },
+  "sample_9315.png": {
+    "original_idx": 9315,
+    "label": 153,
+    "num_digits": 3
+  },
+  "sample_4854.png": {
+    "original_idx": 4854,
+    "label": 3,
+    "num_digits": 1
+  },
+  "sample_3351.png": {
+    "original_idx": 3351,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_8947.png": {
+    "original_idx": 8947,
+    "label": 9,
+    "num_digits": 1
+  },
+  "sample_6217.png": {
+    "original_idx": 6217,
+    "label": 2,
+    "num_digits": 1
+  },
+  "sample_4677.png": {
+    "original_idx": 4677,
+    "label": 62,
+    "num_digits": 2
+  },
+  "sample_6551.png": {
+    "original_idx": 6551,
+    "label": 38,
+    "num_digits": 2
+  },
+  "sample_4014.png": {
+    "original_idx": 4014,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_1949.png": {
+    "original_idx": 1949,
+    "label": 146,
+    "num_digits": 3
+  },
+  "sample_2202.png": {
+    "original_idx": 2202,
+    "label": 13,
+    "num_digits": 2
+  },
+  "sample_6761.png": {
+    "original_idx": 6761,
+    "label": 14,
+    "num_digits": 2
+  },
+  "sample_0556.png": {
+    "original_idx": 556,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_9057.png": {
+    "original_idx": 9057,
+    "label": 12,
+    "num_digits": 2
+  },
+  "sample_8239.png": {
+    "original_idx": 8239,
+    "label": 8,
+    "num_digits": 1
+  },
+  "sample_9849.png": {
+    "original_idx": 9849,
+    "label": 19,
+    "num_digits": 2
+  },
+  "sample_0385.png": {
+    "original_idx": 385,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_0582.png": {
+    "original_idx": 582,
+    "label": 7,
+    "num_digits": 1
+  },
+  "sample_1803.png": {
+    "original_idx": 1803,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_2766.png": {
+    "original_idx": 2766,
+    "label": 246,
+    "num_digits": 3
+  },
+  "sample_6091.png": {
+    "original_idx": 6091,
+    "label": 44,
+    "num_digits": 2
+  },
+  "sample_7062.png": {
+    "original_idx": 7062,
+    "label": 3,
+    "num_digits": 1
+  },
+  "sample_2907.png": {
+    "original_idx": 2907,
+    "label": 108,
+    "num_digits": 3
+  },
+  "sample_5771.png": {
+    "original_idx": 5771,
+    "label": 7,
+    "num_digits": 1
+  },
+  "sample_5940.png": {
+    "original_idx": 5940,
+    "label": 7,
+    "num_digits": 1
+  },
+  "sample_7474.png": {
+    "original_idx": 7474,
+    "label": 3,
+    "num_digits": 1
+  },
+  "sample_4804.png": {
+    "original_idx": 4804,
+    "label": 257,
+    "num_digits": 3
+  },
+  "sample_3972.png": {
+    "original_idx": 3972,
+    "label": 2,
+    "num_digits": 1
+  },
+  "sample_2584.png": {
+    "original_idx": 2584,
+    "label": 0,
+    "num_digits": 1
+  },
+  "sample_2676.png": {
+    "original_idx": 2676,
+    "label": 110,
+    "num_digits": 3
+  },
+  "sample_8916.png": {
+    "original_idx": 8916,
+    "label": 3,
+    "num_digits": 1
+  },
+  "sample_5148.png": {
+    "original_idx": 5148,
+    "label": 14,
+    "num_digits": 2
+  },
+  "sample_1291.png": {
+    "original_idx": 1291,
+    "label": 24,
+    "num_digits": 2
+  }
+}
