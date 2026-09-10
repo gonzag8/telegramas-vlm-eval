@@ -5,3 +5,4 @@ openai
 pillow
 pandas
 jupyter
+mlflow

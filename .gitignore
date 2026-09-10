@@ -220,3 +220,8 @@ __marimo__/
 # Project-specific ignores
 images/real/
 *.ipynb_checkpoints
+mlruns/
+mlartifacts/
+mlflow.db
+mlflow.db*
+

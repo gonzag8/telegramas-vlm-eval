@@ -1,0 +1,352 @@
+{
+  "sample_0385.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 1.7771697044372559,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0432.png": {
+    "predicted_value": 30,
+    "raw_response": "{\"value\": 30}",
+    "latency_seconds": 0.7972021102905273,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0556.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.7608275413513184,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0582.png": {
+    "predicted_value": 7,
+    "raw_response": "{\"value\": 7}",
+    "latency_seconds": 1.0715131759643555,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1096.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.8207285404205322,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1291.png": {
+    "predicted_value": 24,
+    "raw_response": "{\"value\": 24}",
+    "latency_seconds": 0.9124155044555664,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1312.png": {
+    "predicted_value": 4,
+    "raw_response": "{\"value\": 4}",
+    "latency_seconds": 0.7960433959960938,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1803.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.9369180202484131,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1831.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.9597816467285156,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1949.png": {
+    "predicted_value": 146,
+    "raw_response": "{\"value\": 146}",
+    "latency_seconds": 0.7761843204498291,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2202.png": {
+    "predicted_value": -13,
+    "raw_response": "{\"value\": -13}",
+    "latency_seconds": 1.039025068283081,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2421.png": {
+    "predicted_value": 6,
+    "raw_response": "{\"value\": 6}",
+    "latency_seconds": 1.4153003692626953,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2584.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.9503741264343262,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2676.png": {
+    "predicted_value": 110,
+    "raw_response": "{\"value\": 110}",
+    "latency_seconds": 0.9147195816040039,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2766.png": {
+    "predicted_value": 246,
+    "raw_response": "{\"value\": 246}",
+    "latency_seconds": 1.1239945888519287,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2907.png": {
+    "predicted_value": 108,
+    "raw_response": "{\"value\": 108}",
+    "latency_seconds": 0.9113268852233887,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_3351.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.8236970901489258,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_3972.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 0.7790694236755371,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4014.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 0.8000214099884033,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4090.png": {
+    "predicted_value": 21,
+    "raw_response": "{\"value\": 21}",
+    "latency_seconds": 0.7634983062744141,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4288.png": {
+    "predicted_value": 56,
+    "raw_response": "{\"value\": 56}",
+    "latency_seconds": 0.7728004455566406,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4368.png": {
+    "predicted_value": 669,
+    "raw_response": "{\"value\": 669}",
+    "latency_seconds": 0.7844130992889404,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4570.png": {
+    "predicted_value": 20,
+    "raw_response": "{\"value\": 20}",
+    "latency_seconds": 0.8640656471252441,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4677.png": {
+    "predicted_value": 62,
+    "raw_response": "{\"value\": 62}",
+    "latency_seconds": 1.7913339138031006,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4804.png": {
+    "predicted_value": 257,
+    "raw_response": "{\"value\": 257}",
+    "latency_seconds": 1.0074572563171387,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4854.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 0.7863504886627197,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5148.png": {
+    "predicted_value": 19,
+    "raw_response": "{\"value\": 19}",
+    "latency_seconds": 2.932687282562256,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5238.png": {
+    "predicted_value": 11,
+    "raw_response": "{\"value\": 11}",
+    "latency_seconds": 1.0830185413360596,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5577.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 0.7793567180633545,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5771.png": {
+    "predicted_value": 7,
+    "raw_response": "{\"value\": 7}",
+    "latency_seconds": 0.9835100173950195,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5940.png": {
+    "predicted_value": 4,
+    "raw_response": "{\"value\": 4}",
+    "latency_seconds": 0.8305037021636963,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6091.png": {
+    "predicted_value": 44,
+    "raw_response": "{\"value\": 44}",
+    "latency_seconds": 0.7955412864685059,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6217.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 1.0456602573394775,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6551.png": {
+    "predicted_value": 38,
+    "raw_response": "{\"value\": 38}",
+    "latency_seconds": 0.8911411762237549,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6590.png": {
+    "predicted_value": 430,
+    "raw_response": "{\"value\": 430}",
+    "latency_seconds": 0.9432532787322998,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6636.png": {
+    "predicted_value": 917,
+    "raw_response": "{\"value\": 917}",
+    "latency_seconds": 0.9656095504760742,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6739.png": {
+    "predicted_value": 242,
+    "raw_response": "{\"value\": 242}",
+    "latency_seconds": 1.1955103874206543,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6761.png": {
+    "predicted_value": 14,
+    "raw_response": "{\"value\": 14}",
+    "latency_seconds": 0.9729955196380615,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7062.png": {
+    "predicted_value": 23,
+    "raw_response": "{\"value\": 23}",
+    "latency_seconds": 1.5778923034667969,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7106.png": {
+    "predicted_value": 5,
+    "raw_response": "{\"value\": 5}",
+    "latency_seconds": 1.1628153324127197,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7381.png": {
+    "predicted_value": 15,
+    "raw_response": "{\"value\": 15}",
+    "latency_seconds": 1.4894952774047852,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7474.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 0.8644707202911377,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8239.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 0.8054683208465576,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8646.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 1.3852143287658691,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8916.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 1.008683443069458,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8947.png": {
+    "predicted_value": 9,
+    "raw_response": "{\"value\": 9}",
+    "latency_seconds": 0.7901220321655273,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9052.png": {
+    "predicted_value": 115,
+    "raw_response": "{\"value\": 115}",
+    "latency_seconds": 0.9337186813354492,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9057.png": {
+    "predicted_value": 12,
+    "raw_response": "{\"value\": 12}",
+    "latency_seconds": 0.9212641716003418,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9315.png": {
+    "predicted_value": 153,
+    "raw_response": "{\"value\": 153}",
+    "latency_seconds": 0.8881769180297852,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9849.png": {
+    "predicted_value": 19,
+    "raw_response": "{\"value\": 19}",
+    "latency_seconds": 1.3024773597717285,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  }
+}

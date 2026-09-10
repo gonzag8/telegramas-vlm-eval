@@ -26,7 +26,7 @@ def levenshtein_distance(s1: str, s2: str) -> int:
         prev_row = curr_row
     return prev_row[-1]
 
-def evaluate_model_results(model_name: str, raw_results_file: str, ground_truth_file: str = "ground_truth/labels.json"):
+def evaluate_model_results(model_name: str, raw_results_file: str, ground_truth_file: str = "ground_truth/labels.json", return_df: bool = False):
     if not os.path.exists(raw_results_file):
         raise FileNotFoundError(f"No se encontró el archivo de resultados: {raw_results_file}")
     if not os.path.exists(ground_truth_file):
@@ -39,10 +39,12 @@ def evaluate_model_results(model_name: str, raw_results_file: str, ground_truth_
         predictions = json.load(f)
 
     records = []
-    for filename, gt in ground_truth.items():
+    for filename, pred_entry in predictions.items():
+        if filename not in ground_truth:
+            continue
+        gt = ground_truth[filename]
         true_val = gt["label"]
         num_digits = gt["num_digits"]
-        pred_entry = predictions.get(filename, {})
         pred_val = pred_entry.get("predicted_value")
         latency = pred_entry.get("latency_seconds")
         raw_text = pred_entry.get("raw_response", "")
@@ -115,6 +117,94 @@ def evaluate_model_results(model_name: str, raw_results_file: str, ground_truth_
     for k, v in summary.items():
         print(f"  {k}: {v}")
     print(f"Consolidado guardado en {metrics_file}")
+
+    # Guardar reporte comparativo enriquecido
+    os.makedirs("results/evaluated", exist_ok=True)
+    comparison_csv = f"results/evaluated/{model_name}_comparison.csv"
+    df.to_csv(comparison_csv, index=False)
+
+    # Generar visualización gráfica de errores
+    error_rows = df[~df["exact_match"]]
+    error_plot_path = None
+    if len(error_rows) > 0:
+        try:
+            import matplotlib.pyplot as plt
+            from PIL import Image
+            n_err = len(error_rows)
+            cols = min(4, n_err)
+            rows = (n_err + cols - 1) // cols
+            fig, axes = plt.subplots(rows, cols, figsize=(cols * 3.8, rows * 2.2))
+            axes_list = axes.flatten() if hasattr(axes, "flatten") else [axes]
+
+            for idx, (_, row) in enumerate(error_rows.iterrows()):
+                img_path = os.path.join("images/test", row["image"])
+                if os.path.exists(img_path):
+                    img = Image.open(img_path)
+                    axes_list[idx].imshow(img, cmap="gray")
+                axes_list[idx].set_title(
+                    f"Real: {row['true_label']} | Pred: {row['pred_label']}\n({row['image']})",
+                    color="darkred",
+                    fontsize=9,
+                    fontweight="bold"
+                )
+                axes_list[idx].axis("off")
+
+            for extra in range(n_err, len(axes_list)):
+                axes_list[extra].axis("off")
+
+            plt.tight_layout()
+            error_plot_path = f"results/evaluated/{model_name}_errors.png"
+            plt.savefig(error_plot_path, dpi=130, bbox_inches="tight")
+            plt.close()
+        except Exception as err:
+            print(f"No se pudo generar la grilla visual de errores: {err}")
+
+    # Registro en MLflow (Experiment Tracking)
+    try:
+        import mlflow
+        os.environ["MLFLOW_DISABLE_AGENT_HINT"] = "1"
+        mlflow.set_experiment("telegramas-vlm-benchmark")
+        with mlflow.start_run(run_name=model_name):
+            # 1. Parámetros del benchmark
+            mlflow.log_params({
+                "model_name": model_name,
+                "total_samples": total_samples,
+                "raw_results_file": raw_results_file,
+                "ground_truth_file": ground_truth_file
+            })
+
+            # 2. Métricas numéricas
+            metrics_to_log = {
+                "exact_match_accuracy": float(summary["exact_match_accuracy"]),
+                "mean_cer": float(summary["mean_cer"]),
+                "parse_error_rate": float(summary["parse_error_rate"])
+            }
+            if summary["mean_latency_s"] is not None and not pd.isna(summary["mean_latency_s"]):
+                metrics_to_log["mean_latency_s"] = float(summary["mean_latency_s"])
+            if not pd.isna(summary["acc_zeros"]):
+                metrics_to_log["acc_zeros"] = float(summary["acc_zeros"])
+            if not pd.isna(summary["acc_1_digit"]):
+                metrics_to_log["acc_1_digit"] = float(summary["acc_1_digit"])
+            if not pd.isna(summary["acc_2_digits"]):
+                metrics_to_log["acc_2_digits"] = float(summary["acc_2_digits"])
+            if not pd.isna(summary["acc_3_digits"]):
+                metrics_to_log["acc_3_digits"] = float(summary["acc_3_digits"])
+
+            mlflow.log_metrics(metrics_to_log)
+
+            # 3. Artefactos: JSON crudo, CSV comparativo y Grilla visual de errores
+            if os.path.exists(raw_results_file):
+                mlflow.log_artifact(raw_results_file, artifact_path="raw_predictions")
+            if os.path.exists(comparison_csv):
+                mlflow.log_artifact(comparison_csv, artifact_path="evaluation_reports")
+            if error_plot_path and os.path.exists(error_plot_path):
+                mlflow.log_artifact(error_plot_path, artifact_path="evaluation_reports")
+
+        print("Métricas, reporte comparativo y gráfico de errores registrados exitosamente en MLflow.")
+    except Exception as e:
+        print(f"MLflow tracking omitido o con advertencia: {e}")
+    if return_df:
+        return summary, df
     return summary
 
 if __name__ == "__main__":

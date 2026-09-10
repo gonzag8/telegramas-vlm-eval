@@ -62,7 +62,18 @@ Cada notebook en `notebooks/` es independiente y corre el benchmark para un mode
 
 ## Resultados
 
-*(Pendiente — se completa esta sección una vez corrido el primer benchmark)*
+| Modelo | Modo | Muestras | Exact Match | CER (Mean) | Ceros (0) | 1 Dígito | 2 Dígitos | 3 Dígitos | Latencia Media |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Qwen2.5-VL-72B** | Zero-Shot (Baseline) | 50 | **76.0%** | 0.1933 | 90.0% | 80.0% | 66.7% | 80.0% | 1.03 s |
+| **Qwen2.5-VL-72B** | Few-Shot (Domain-Rules) | 50 | **80.0%** (87% efect.) | 0.1700 | 90.0% | 88.0% | 66.7% | 80.0% | 5.58 s |
+
+### Experiment Tracking con MLflow
+El proyecto cuenta con seguimiento automático de experimentos mediante **MLflow**.
+Para explorar la interfaz interactiva, gráficos comparativos y auditoría visual de errores:
+```bash
+mlflow ui
+```
+Navegar a `http://localhost:5000` para ver métricas, matrices comparativas y las imágenes recortadas con fallos de predicción.
 
 ## Nota sobre datos sensibles
 

@@ -1,0 +1,352 @@
+{
+  "sample_0385.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 16.211043119430542,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0432.png": {
+    "predicted_value": 30,
+    "raw_response": "{\"value\": 30}",
+    "latency_seconds": 6.501211404800415,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0556.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 3.9492132663726807,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_0582.png": {
+    "predicted_value": 7,
+    "raw_response": "{\"value\": 7}",
+    "latency_seconds": 4.299824237823486,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1096.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 1.0675830841064453,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1291.png": {
+    "predicted_value": 24,
+    "raw_response": "{\"value\": 24}",
+    "latency_seconds": 11.155786037445068,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1312.png": {
+    "predicted_value": 4,
+    "raw_response": "{\"value\": 4}",
+    "latency_seconds": 1.053706407546997,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1803.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 9.85953164100647,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1831.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 9.56137228012085,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_1949.png": {
+    "predicted_value": 146,
+    "raw_response": "{\"value\": 146}",
+    "latency_seconds": 1.1689097881317139,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2202.png": {
+    "predicted_value": null,
+    "raw_response": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen2.5-vl-72b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Parasail', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3J8hMXC7VdXuE9uXCa8hLle8R2G'}",
+    "latency_seconds": 23.61779499053955,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "error"
+  },
+  "sample_2421.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 9.241034030914307,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2584.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 3.6201729774475098,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2676.png": {
+    "predicted_value": 110,
+    "raw_response": "{\"value\": 110}",
+    "latency_seconds": 1.4451236724853516,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_2766.png": {
+    "predicted_value": null,
+    "raw_response": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen2.5-vl-72b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Parasail', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3J8hMXC7VdXuE9uXCa8hLle8R2G'}",
+    "latency_seconds": 23.27501344680786,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "error"
+  },
+  "sample_2907.png": {
+    "predicted_value": null,
+    "raw_response": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen2.5-vl-72b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Parasail', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3J8hMXC7VdXuE9uXCa8hLle8R2G'}",
+    "latency_seconds": 22.69221806526184,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "error"
+  },
+  "sample_3351.png": {
+    "predicted_value": null,
+    "raw_response": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen2.5-vl-72b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Parasail', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3J8hMXC7VdXuE9uXCa8hLle8R2G'}",
+    "latency_seconds": 23.019258499145508,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "error"
+  },
+  "sample_3972.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 1.912055253982544,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4014.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 7.501664400100708,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4090.png": {
+    "predicted_value": 21,
+    "raw_response": "{\"value\": 21}",
+    "latency_seconds": 1.5258712768554688,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4288.png": {
+    "predicted_value": 56,
+    "raw_response": "{\"value\": 56}",
+    "latency_seconds": 2.2696242332458496,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4368.png": {
+    "predicted_value": 9,
+    "raw_response": "{\"value\": 9}",
+    "latency_seconds": 18.578035593032837,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4570.png": {
+    "predicted_value": 20,
+    "raw_response": "{\"value\": 20}",
+    "latency_seconds": 0.7606182098388672,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4677.png": {
+    "predicted_value": 62,
+    "raw_response": "{\"value\": 62}",
+    "latency_seconds": 1.4177241325378418,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4804.png": {
+    "predicted_value": 257,
+    "raw_response": "{\"value\": 257}",
+    "latency_seconds": 1.3730401992797852,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_4854.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 1.908334493637085,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5148.png": {
+    "predicted_value": 19,
+    "raw_response": "{\"value\": 19}",
+    "latency_seconds": 0.8339738845825195,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5238.png": {
+    "predicted_value": 11,
+    "raw_response": "{\"value\": 11}",
+    "latency_seconds": 1.0458528995513916,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5577.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 1.3505995273590088,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5771.png": {
+    "predicted_value": 7,
+    "raw_response": "{\"value\": 7}",
+    "latency_seconds": 0.9109809398651123,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_5940.png": {
+    "predicted_value": 4,
+    "raw_response": "{\"value\": 4}",
+    "latency_seconds": 0.9842865467071533,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6091.png": {
+    "predicted_value": 44,
+    "raw_response": "{\"value\": 44}",
+    "latency_seconds": 0.984703540802002,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6217.png": {
+    "predicted_value": 2,
+    "raw_response": "{\"value\": 2}",
+    "latency_seconds": 1.6738824844360352,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6551.png": {
+    "predicted_value": 38,
+    "raw_response": "{\"value\": 38}",
+    "latency_seconds": 5.518486499786377,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6590.png": {
+    "predicted_value": 130,
+    "raw_response": "{\"value\": 130}",
+    "latency_seconds": 1.2842752933502197,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6636.png": {
+    "predicted_value": 117,
+    "raw_response": "{\"value\": 117}",
+    "latency_seconds": 1.1256117820739746,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6739.png": {
+    "predicted_value": 242,
+    "raw_response": "{\"value\": 242}",
+    "latency_seconds": 1.3157081604003906,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_6761.png": {
+    "predicted_value": 14,
+    "raw_response": "{\"value\": 14}",
+    "latency_seconds": 1.0342559814453125,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7062.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 1.0283782482147217,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7106.png": {
+    "predicted_value": 5,
+    "raw_response": "{\"value\": 5}",
+    "latency_seconds": 1.5166985988616943,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7381.png": {
+    "predicted_value": 15,
+    "raw_response": "{\"value\": 15}",
+    "latency_seconds": 1.7106294631958008,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_7474.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 1.454841136932373,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8239.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 5.298164367675781,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8646.png": {
+    "predicted_value": 0,
+    "raw_response": "{\"value\": 0}",
+    "latency_seconds": 8.708813905715942,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8916.png": {
+    "predicted_value": 3,
+    "raw_response": "{\"value\": 3}",
+    "latency_seconds": 1.432462453842163,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_8947.png": {
+    "predicted_value": 9,
+    "raw_response": "{\"value\": 9}",
+    "latency_seconds": 5.456279754638672,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9052.png": {
+    "predicted_value": 115,
+    "raw_response": "{\"value\": 115}",
+    "latency_seconds": 9.997921705245972,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9057.png": {
+    "predicted_value": 12,
+    "raw_response": "{\"value\": 12}",
+    "latency_seconds": 0.977095365524292,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9315.png": {
+    "predicted_value": 153,
+    "raw_response": "{\"value\": 153}",
+    "latency_seconds": 0.8294334411621094,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  },
+  "sample_9849.png": {
+    "predicted_value": 19,
+    "raw_response": "{\"value\": 19}",
+    "latency_seconds": 13.742708444595337,
+    "model": "qwen/qwen2.5-vl-72b-instruct",
+    "status": "success"
+  }
+}
