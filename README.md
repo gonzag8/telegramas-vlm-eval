@@ -1,12 +1,12 @@
-# VLM Benchmark — Telegramas Electorales
+# VLM Benchmark — Dígitos escritos a mano
 
-Ambiente de pruebas para evaluar Vision Language Models (Chandra-OCR, Qwen-VL, Llama Vision) aplicados a la lectura de telegramas electorales de la Provincia de Santa Fe.
+Ambiente de pruebas para evaluar Vision Language Models (Chandra-OCR, Qwen-VL, Llama Vision) aplicados a la lectura de Dígitos escritos a mano.
 
 **Estado actual**: en configuración inicial. Todavía no hay resultados — este README documenta el diseño del ambiente de pruebas antes de correr el primer benchmark.
 
 ## Objetivo
 
-Comparar qué tan bien distintos VLMs extraen datos estructurados (votos por partido, número de mesa, etc.) a partir de imágenes de planillas, usando el mismo set de imágenes y el mismo prompt para cada modelo, de forma que la comparación sea justa entre ellos.
+Comparar qué tan bien distintos VLMs extraen datos estructurados a partir de imágenes de planillas, usando el mismo set de imágenes y el mismo prompt para cada modelo, de forma que la comparación sea justa entre ellos.
 
 ## Modelos a evaluar
 
@@ -74,7 +74,3 @@ Para explorar la interfaz interactiva, gráficos comparativos y auditoría visua
 mlflow ui
 ```
 Navegar a `http://localhost:5000` para ver métricas, matrices comparativas y las imágenes recortadas con fallos de predicción.
-
-## Nota sobre datos sensibles
-
-Las imágenes usadas en esta primera etapa son de prueba, no telegramas reales. Antes de correr el benchmark sobre datos electorales reales, se define con la cátedra si corresponde usar APIs de terceros o si es necesario correr los modelos localmente por razones de privacidad de datos.
